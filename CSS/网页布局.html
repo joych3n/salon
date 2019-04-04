@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>页面布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    .div1,
+    .div2 {
+        width: 400px;
+        height: 400px;
+        background: red;
+        margin: 10px;
+    }
+
+    .div11,
+    .div21 {
+        width: 200px;
+        height: 200px;
+        background: green;
+    }
+
+    .div12,
+    .div22 {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+    }
+
+    span {
+        font-size: 6px;
+    }
+</style>
+
+<body>
+    <div class="div1">
+        <span>第1个大盒子里的文字</span>
+        <div class="div11">
+            <span>第1个中盒子里的文字</span>
+        </div>
+        <div class="div12">
+            <span>第1个小盒子里的文字</span>
+        </div>
+    </div>
+    <div class="div2">
+        <span>第2个大盒子里的文字</span>
+        <div class="div21">
+            <span>第2个中盒子里的文字</span>
+        </div>
+        <div class="div22">
+            <span>第2个小盒子里的文字</span>
+        </div>
+    </div>
+</body>
+
+</html>
