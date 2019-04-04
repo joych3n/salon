@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS优先级</title>
+  <meta charset="utf-8">
+  <style media="screen">
+    * {
+      color: gray;
+    }
+
+    body {
+      color: green;
+    }
+
+    span {
+      color: red;
+    }
+
+    .span-class {
+      color: yellow;
+    }
+
+    #span-id {
+      color: blue;
+    }
+
+    p span {
+      color: red;
+    }
+
+    .p-class .span-class {
+      color: yellow;
+    }
+
+    #p-id #span-id {
+      color: blue;
+    }
+
+    .p-class #span-id{
+      color: blue;
+    }
+
+    #p-id .span-class{
+      color: yellow;
+    }
+
+    .div-class .div-class .div-class .div-class .div-class .div-class .div-class .div-class .div-class .div-class .div-class {
+      color: yellow;
+    }
+
+    .div-class {
+      color: yellow;
+    }
+
+    #div-id #div-id #div-id #div-id #div-id #div-id #div-id #div-id #div-id #div-id #div-id {
+      color: blue;
+    }
+
+    #div-id {
+      color: blue;
+    }
+
+    div div div div div div div div div div div {
+      color: red;
+    }
+
+    div {
+      color: red;
+    }
+  </style>
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <h1>CSS优先级</h1>
+  <!-- 第一个实例 -->
+  <p class="p-class" id="p-id"><span class="span-class" id="span-id" style="font-size: 32px">第一个实例</span></p>
+  <!-- 第二个实例 -->
+  <div class="div-class" id="div-id">
+    <div class="div-class" id="div-id">
+      <div class="div-class" id="div-id">
+        <div class="div-class" id="div-id">
+          <div class="div-class" id="div-id">
+            <div class="div-class" id="div-id">
+              <div class="div-class" id="div-id">
+                <div class="div-class" id="div-id">
+                  <div class="div-class" id="div-id">
+                    <div class="div-class" id="div-id">
+                      <div class="div-class" id="div-id" style="color:purple;font-size: 32px">第二个实例</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 结论 -->
+  <h2>观察“CSS优先级”加载css样式的顺序，现象如下：</h2>
+  <p>1、通配符比从body继承的优先级更高；</p>
+  <p>2、后加载的但优先级更低的选择器，无法覆盖优先级更高的选择器；</p>
+  <h2>观察“第一个实例”加载css样式的顺序，现象如下：</h2>
+  <p>1、相同选择器，后加载的优先级更高；</p>
+  <h2>观察“第二个实例”加载css样式的顺序，现象如下：</h2>
+  <p>1、1个clas比11个标签的优先级更高；</p>
+  <p>2、1个id比11个class的优先级更高；</p>
+  <p>3、行内比11个id的优先级更高；</p>
+  <h2 style="color:green;">通过以上现象可以得出如下结论：</h2>
+  <p>1、优先级：选择器类型 > 加载顺序 > 选择器顺序；</p>
+  <p>2、选择器的优先级，!important > 行内 > id选择器 > class选择器 > 标签选择器 > 通配符选择器 > 继承 > 浏览器默认；</p>
+  <p>3、选择器类别相同时，个数多的优先级更高；</p>
+  <p>4、选择器完全相同时，后加载的优先级更高；</p>
+  <p>5、选择器的个数和类型均相同但顺序不同时，优先级取决于靠前的选择器；</p>
+  <h2 style="color:red;">常见的错误CSS优先级描述：</h2>
+  <p>1、内联样式表比外部样式表的优先级更高；</p>
+  <p>2、内联样式表和外部样式表，后加载的优先级更高；</p>
+  <p>3、内联样式表的权值为 1000；ID选择器的权值为 100；Class类选择器的权值为 10；HTML标签选择器的权值为 1；</p>
+
+</body>
+
+</html>

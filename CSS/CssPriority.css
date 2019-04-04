@@ -1,0 +1,38 @@
+* {
+  color: gray;
+}
+
+body {
+  color: green;
+}
+
+span {
+  color: red;
+}
+
+.span-class {
+  color: yellow;
+}
+
+#span-id {
+  color: blue;
+}
+
+p span {
+  color: red;
+}
+
+.p-class .span-class {
+  color: yellow;
+}
+
+#p-id #span-id {
+  color: blue;
+}
+.p-class #span-id{
+  color: blue;
+}
+
+#p-id .span-class{
+  color: yellow;
+}

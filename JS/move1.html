@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>圆球跟随鼠标的缓冲运动</title>
+    <style>
+        body {
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        #div1 {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var timerX = null;
+            var timerY = null;
+
+            function startMove(iTargetX, iTargetY) {
+                clearInterval(timerX);
+                timerX = setInterval(function () {
+                    var speedX = (iTargetX - oDiv.offsetLeft) / 10;
+                    speedX = speedX > 0 ? Math.ceil(speedX) : Math.floor(speedX);
+                    if (iTargetX == oDiv.offsetLeft) {
+                        // console.log('已到达X方向目标位置' + iTargetX, '停止X方向的运动');
+                        clearInterval(timerX);
+                    } else {
+                        // console.log('X方向的当前位置是' + oDiv.offsetLeft, 'X方向的速度是' + speedX);
+                        oDiv.style.left = oDiv.offsetLeft + speedX + 'px';
+                    }
+                }, 10);//时间不能过大，否则定时器还未执行就被关闭，不能即时跟随。
+
+                clearInterval(timerY);
+                timerY = setInterval(function () {
+                    var speedY = (iTargetY - oDiv.offsetTop) / 10;
+                    speedY = speedY > 0 ? Math.ceil(speedY) : Math.floor(speedY);
+                    if (iTargetY == oDiv.offsetTop) {
+                        // console.log('已到达Y方向目标位置' + iTargetY, '停止Y方向的运动');
+                        clearInterval(timerY);
+                    } else {
+                        // console.log('Y方向的当前位置是' + oDiv.offsetTop, 'Y方向的速度是' + speedY);
+                        oDiv.style.top = oDiv.offsetTop + speedY + 'px';
+                    }
+                }, 10);//时间不能过大，否则定时器还未执行就被关闭，不能即时跟随。
+            }
+            document.onmousemove = function (eve) {
+                var e = eve || window.event;
+                var MX = e.clientX - oDiv.offsetWidth / 2;
+                var MY = e.clientY - oDiv.offsetHeight / 2;
+                startMove(MX, MY);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+
+</html>

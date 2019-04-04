@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>多物体任意值运动框架演示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            background-color: red;
+            border: purple solid 1px;
+            position: relative;
+            margin: 50px;
+            float: left;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+    <script src="./js/common/kit.js"></script>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementsByTagName('div');
+            var oSel1 = document.getElementById('sel1');
+            var oSel2 = document.getElementById('sel2');
+            var index1 = 0;
+            var index2 =0;
+            var sAttr = 0;
+            var sCoe=0;
+            var sTarget = 0;
+            var nInitial = 0;
+            oSel1.onchange = function () {
+                index1 = oSel1.selectedIndex;
+                sAttr = oSel1.options[index1].value;
+                if (sAttr == 'width') {
+                    sTarget = 400;
+                    nInitial = 200;
+                } else if (sAttr == 'height') {
+                    sTarget = 400;
+                    nInitial = 200;
+                } else if (sAttr == 'border-width') {
+                    sTarget = 10;
+                    nInitial = 1;
+                } else if (sAttr == 'fontSize') {
+                    sTarget = 32;
+                    nInitial = 16;
+                } else if (sAttr == 'opacity') {
+                    sTarget = 30;
+                    nInitial = 100;
+                } else if (sAttr == 'left') {
+                    sTarget = 50;
+                    nInitial = 0;
+                } else if (sAttr == 'top') {
+                    sTarget = -50;
+                    nInitial = 0;
+                }
+            }
+            oSel2.onchange= function(){
+                index2 = oSel2.selectedIndex;
+                sCoe = oSel2.options[index2].value;
+            }
+            oSel1.onchange();
+            oSel2.onchange();
+            for (var i = 0; i < oDiv.length; i++) {
+                oDiv[i].onmouseover = function () {
+                    move(this, sAttr, sTarget,sCoe)
+                }
+                oDiv[i].onmouseout = function () {
+                    move(this, sAttr, nInitial,sCoe)
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>请选择运动形式
+        <select name="sel" id="sel1">
+            <option value="width">变宽</option>
+            <option value="height">变高</option>
+            <option value="border-width">变边框</option>
+            <option value="fontSize">变字号</option>
+            <option value="opacity">变透明度</option>
+            <option value="left">右移</option>
+            <option value="top">上移</option>
+        </select>
+        和速度
+        <select name="sel" id="sel2">
+            <option value="2">最快</option>
+            <option value="4">较快</option>
+            <option  selected value="8">中等</option>
+            <option value="16">较慢</option>
+            <option value="32">最慢</option>
+        </select>
+        鼠标移入/移出可以预览效果。
+    </p>
+    <div>多物体</div>
+    <div>任意值</div>
+    <div>运动框架</div>
+</body>
+
+</html>
