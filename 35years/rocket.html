@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>小火箭</title>
+    <style>
+      .dot {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #00000033;
+        z-index: -10;
+      }
+      #ball {
+        width: 50px;
+        height: 100px;
+        background: url("img/rocket.png");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: -200px;
+        z-index: 10;
+      }
+      #draw_box {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 10000px;
+      }
+    </style>
+  </head>
+  <body id="draw_box">
+    <div id="ball"></div>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      var box = document.getElementById("draw_box");
+      var ball = document.getElementById("ball");
+      var contentHeight = $(document).height();
+      var contentWidth = $(document).width();
+
+      // 小火箭轨迹线
+      var density = 20; // 轨迹线的疏密
+      var amplitude = 150; // 轨迹线的振幅
+      var xStart = contentWidth / 2; // 轨迹线的X方向起点
+      var period = 650; // 轨迹线的周期
+      for (var radian = 0; radian < contentHeight; radian += density) {
+        var childDot = document.createElement("div");
+        childDot.className = "dot";
+        childDot.style.left =
+          amplitude * Math.sin((radian * Math.PI) / period) + xStart + "px";
+        childDot.style.top = radian + "px";
+        box.appendChild(childDot);
+      }
+      // 小火箭运动方法
+      function rocket(value) {
+        var y = amplitude * Math.sin((value * Math.PI) / period) + xStart;
+        var slope = -(amplitude * Math.cos((value * Math.PI) / period)) / 4.4;
+        ball.style.top = value - 50 + "px";
+        ball.style.left = y - 25 + "px";
+        ball.style.transform = "rotate(" + slope + "deg)";
+      }
+      // 初始化小火箭位置
+      rocket(100);
+      // 小火箭跟随滑动而运动
+      $(document).scroll(function() {
+        rocket($(document).scrollTop() + 100);
+      });
+    </script>
+  </body>
+</html>

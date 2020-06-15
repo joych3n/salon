@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- <script src="http://at.alicdn.com/t/font_1560195_y7fy3xzlbp.js"></script> -->
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
+    <title>百版庆生 纸媒之美</title>
+  </head>
+  <body id="draw_box">
+    <div id="ball"></div>
+    <div class="masking">
+      <svg class="icon lock-screen" aria-hidden="true">
+        <use xlink:href="#icon-pingmusuoding"></use>
+      </svg>
+      <span>为了保证观看效果，请锁屏观看。</span>
+    </div>
+    <div class="percent-box">
+      <div class="percent-bar">
+        <div class="percent-progress">
+          <div class="percent-rocket"></div>
+          <span class="percent-num">1984</span>
+        </div>
+      </div>
+    </div>
+    <div class="audio-box">
+      <audio
+        id="bg-music"
+        preload="auto"
+        src="./mp3/1985.mp3"
+        loop="loop"
+      ></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="1984.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="1985.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="1992.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="1996.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="1999.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="2001.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="2008.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="2017.mp3"></audio>
+      <audio class="bg-music" preload="auto" src="" data-src="2020.mp3"></audio>
+    </div>
+    <div class="content">
+      <div class="p0">
+        <img
+          class="p0-1 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p0_1.png"
+        />
+      </div>
+      <!-- <div class="p1">
+      <img class="p1-1 wow fadeInDown" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_1.png" />
+      <img class="p1-2 wow fadeInRight" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_2.png" />
+      <img class="p1-3 wow fadeInLeft" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_3.png" />
+      <img class="p1-4 wow fadeInLeft" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_4.png" />
+      <img class="p1-5 wow fadeInLeft" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_5.png" />
+      <img class="p1-6 view-details wow pulse" data-wow-iteration="infinite" data-detail="p1" data-wow-duration="1s"
+        src="./img/wihte.png" data-src="p1_6.png" />
+      <img class="p1-7 wow fadeInUp" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_7.png" />
+      <img class="p1-11 wow fadeIn" data-wow-duration="1s" src="./img/wihte.png" data-src="p1_11.png" />
+    </div> -->
+      <div class="p2">
+        <img
+          class="p2-1 wow fadeInUp"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_1.png"
+        />
+        <img
+          class="p2-2 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_2.png"
+        />
+        <img
+          class="p2-3 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_3.png"
+        />
+        <img
+          class="p2-4 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_4.png"
+        />
+        <img
+          class="p2-5 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p2"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_5.png"
+        />
+        <img
+          class="p2-6 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_6.png"
+        />
+        <img
+          class="p2-7 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_7.png"
+        />
+        <img
+          class="p2-8 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_8.png"
+        />
+        <img
+          class="p2-9 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p2_9.png"
+        />
+      </div>
+      <div class="p3">
+        <img
+          class="p3-1 wow fadeInUp"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_1.png"
+        />
+        <img
+          class="p3-2 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_2.png"
+        />
+        <img
+          class="p3-3 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_3.png"
+        />
+        <img
+          class="p3-4 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p3"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_4.png"
+        />
+        <img
+          class="p3-5 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_5.png"
+        />
+        <img
+          class="p3-6 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_6.png"
+        />
+        <img
+          class="p3-7 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p3_7.png"
+        />
+      </div>
+      <div class="p4">
+        <img
+          class="p4-1 wow fadeInUp"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_1.png"
+        />
+        <img
+          class="p4-2 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_2.png"
+        />
+        <img
+          class="p4-3 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_3.png"
+        />
+        <img
+          class="p4-4 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p4"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_4.png"
+        />
+        <img
+          class="p4-5 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_5.png"
+        />
+        <img
+          class="p4-6 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_6.png"
+        />
+        <img
+          class="p4-7 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_7.png"
+        />
+        <img
+          class="p4-8 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p4_8.png"
+        />
+      </div>
+      <div class="p5">
+        <img
+          class="p5-1 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p5_1.png"
+        />
+        <img
+          class="p5-2 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p5"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p5_2.png"
+        />
+        <img
+          class="p5-3 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p5_3.png"
+        />
+        <img
+          class="p5-4 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p5_4.png"
+        />
+        <img
+          class="p5-5 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p5_5.png"
+        />
+      </div>
+      <div class="p6">
+        <img
+          class="p6-1 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_1.png"
+        />
+        <img
+          class="p6-2 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_2.png"
+        />
+        <img
+          class="p6-3 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_3.png"
+        />
+        <img
+          class="p6-4 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p6"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_4.png"
+        />
+        <img
+          class="p6-5 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_5.png"
+        />
+        <img
+          class="p6-6 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_6.png"
+        />
+        <img
+          class="p6-7 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_7.png"
+        />
+        <img
+          class="p6-8 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_8.png"
+        />
+        <img
+          class="p6-9 wow fadeInUp"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p6_9.png"
+        />
+      </div>
+      <div class="p7">
+        <img
+          class="p7-1 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_1.png"
+        />
+        <img
+          class="p7-2 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p7"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_2.png"
+        />
+        <img
+          class="p7-3 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_3.png"
+        />
+        <img
+          class="p7-4 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_4.png"
+        />
+        <img
+          class="p7-5 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_5.png"
+        />
+        <img
+          class="p7-6 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_6.png"
+        />
+        <img
+          class="p7-7 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p7_7.png"
+        />
+      </div>
+      <div class="p8">
+        <img
+          class="p8-1 wow fadeInUp"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_1.png"
+        />
+        <img
+          class="p8-2 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_2.png"
+        />
+        <img
+          class="p8-3 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_3.png"
+        />
+        <img
+          class="p8-4 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p8"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_4.png"
+        />
+        <img
+          class="p8-5 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_5.png"
+        />
+        <img
+          class="p8-6 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_6.png"
+        />
+        <img
+          class="p8-7 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_7.png"
+        />
+        <img
+          class="p8-8 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_8.png"
+        />
+        <img
+          class="p8-9 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_9.png"
+        />
+        <img
+          class="p8-10 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_10.png"
+        />
+        <img
+          class="p8-11 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_11.png"
+        />
+        <img
+          class="p8-12 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_12.png"
+        />
+        <img
+          class="p8-13 wow fadeInLeft"
+          data-wow-duration="2s"
+          src="./img/wihte.png"
+          data-src="p8_13.png"
+        />
+        <img
+          class="p8-14 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p8_14.png"
+        />
+      </div>
+      <div class="p9">
+        <img
+          class="p9-1 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p9_1.png"
+        />
+        <img
+          class="p9-2 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p9_2.png"
+        />
+        <img
+          class="p9-3 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p9_3.png"
+        />
+        <img
+          class="p9-4 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p9"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p9_4.png"
+        />
+        <img
+          class="p9-5 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p9_5.png"
+        />
+      </div>
+      <div class="p10">
+        <img
+          class="p10-1 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_1.png"
+        />
+        <img
+          class="p10-2 view-details wow pulse"
+          data-wow-iteration="infinite"
+          data-detail="p10"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_2.png"
+        />
+        <img
+          class="p10-3 wow fadeIn"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_3.png"
+        />
+        <img
+          class="p10-4 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_4.png"
+        />
+        <img
+          class="p10-5 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_5.png"
+        />
+        <img
+          class="p10-6 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_6.png"
+        />
+        <img
+          class="p10-7 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_7.png"
+        />
+        <img
+          class="p10-8 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_8.png"
+        />
+        <img
+          class="p10-9 wow fadeInDown"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_9.png"
+        />
+        <img
+          class="p10-10 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_10.png"
+        />
+        <img
+          class="p10-11 wow fadeInRight"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_11.png"
+        />
+        <img
+          class="p10-12 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_12.png"
+        />
+        <img
+          class="p10-13 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_13.png"
+        />
+        <!-- <img class="p10-14 wow fadeInLeft" data-wow-duration="1s" src="./img/wihte.png" data-src="p10_14.png" /> -->
+        <img
+          class="p10-15 wow fadeInLeft"
+          data-wow-duration="1s"
+          src="./img/wihte.png"
+          data-src="p10_15.png"
+        />
+      </div>
+    </div>
+    <div class="detail">
+      <div class="close-detail"></div>
+    </div>
+    <div class="percent-box">
+      <div class="percent-bar">
+        <div class="percent-progress">
+          <div class="percent-rocket joych3n"></div>
+          <span class="percent-num">1984</span>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      (function(doc, win) {
+        var docEl = doc.documentElement, // 获取html对象
+          resizeEvt = "orientationchange" in window ? "orientationchange" : "resize", // 横屏是否支持，不支持则为浏览器大小改变
+          // 计算页面字体大小
+          recalc = function() {
+            // 获取页面宽度
+            var clientWidth = docEl.clientWidth;
+            // 获取不到页面宽度，直接返回
+            if (!clientWidth) return;
+            // 设置html字体大小(浏览器默认字体大小为16px)
+            docEl.style.fontSize = (clientWidth / 375) * 16 + "px";
+          };
+        // 不支持addEventListener,返回
+        if (!doc.addEventListener) return;
+        // 监听事件，获取当前html标签的字体大小
+        win.addEventListener(resizeEvt, recalc, false);
+        // dom内容加在完成事件
+        doc.addEventListener("DOMContentLoaded", recalc, false);
+      })(document, window);
+    </script>
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
+    <script>
+      // var url = location.href;
+      // if (url.indexOf("?") > 0) {
+      //   location.href = "http://h5.zhijinweilai.com/35y/";
+      //   url = "http://h5.zhijinweilai.com/35y/";
+      // }
+      // $.ajax({
+      //   type: "get",
+      //   url: "http://h5.zhijinweilai.com/app/h5/js_ticket/?url=" + url,
+      //   success: function(data) {
+      //     wx.config({
+      //       debug: false,
+      //       appId: data.data.app_id,
+      //       timestamp: data.data.timestamp,
+      //       nonceStr: data.data.noncestr,
+      //       signature: data.data.signature,
+      //       jsApiList: [
+      //         "onMenuShareTimeline",
+      //         "onMenuShareAppMessage",
+      //         "onMenuShareQQ",
+      //         "onMenuShareWeibo",
+      //         "onMenuShareQZone"
+      //       ]
+      //     });
+      //   },
+      //   error: function(data) {
+      //     // alert("连接失败！");
+      //   }
+      // });
+
+      // wx.ready(function() {
+      //   var shareData = {
+      //     title: "百版庆生 纸媒之美 ——《中国经营报》35周年",
+      //     desc: "致敬时代，洞见未来",
+      //     link: "",
+      //     imgUrl: "http://h5.zhijinweilai.com/35y/img/share-logo.jpg"
+      //   };
+
+      //   wx.onMenuShareAppMessage(shareData); //分享给好友
+      //   wx.onMenuShareTimeline(shareData); //分享到朋友圈
+      //   wx.onMenuShareQQ(shareData); //分享给手机QQ
+      //   wx.onMenuShareWeibo(shareData); //分享腾讯微博
+      //   wx.onMenuShareQZone(shareData); //分享到QQ空间
+      // });
+      // wx.error(function(res) {
+      //   // alert(res.errMsg);//错误提示
+      // });
+    </script>
+  </body>
+</html>
